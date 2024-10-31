@@ -1,0 +1,25 @@
+.categories-menu {
+    width: 250px;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+}
+
+.categories-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.categories-menu .category-name {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.child-categories {
+    margin-left: 20px;
+}
+
+.child-category {
+    cursor: pointer;
+    padding: 5px 0;
+}

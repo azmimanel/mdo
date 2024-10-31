@@ -1,0 +1,174 @@
+{
+    "categories": [
+        {
+            "id": "1",
+            "name": "Pierres",
+            "category_slug": "pierres",
+            "category_type": "product",
+            "child_categories": [
+                {
+                    "id": "2",
+                    "name": "Pierres Locales",
+                    "category_slug": "pierres_locales",
+                    "products": []
+                },
+                {
+                    "id": "3",
+                    "name": "Pierres Importées",
+                    "category_slug": "pierres_importées",
+                    "products": []
+                },
+                {
+                    "id": "4",
+                    "name": "Pierres D'exceptio",
+                    "category_slug": "pierres_dexception",
+                    "products": []
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "name": "Finitions",
+            "category_slug": "finitions",
+            "child_categories": [
+                {
+                    "id": "6",
+                    "name": "Foussana ",
+                    "category_slug": "foussana",
+                    "products": []
+                },
+                {
+                    "id": "7",
+                    "name": "Thala Beige Royal",
+                    "category_slug": "thala_beige_royal",
+                    "products": []
+                },
+                {
+                    "id": "8",
+                    "name": "Thala Gris Royal",
+                    "category_slug": "thala_gris_royal",
+                    "products": []
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "name": "Equipement Sanitaire",
+            "category_slug": "equipement_sanitaire",
+            "child_categories": [
+                {
+                    "id": "10",
+                    "name": "Caniveau De Douche",
+                    "category_slug": "caniveau_de_douche",
+                    "products": []
+                },
+                {
+                    "id": "11",
+                    "name": "Lavabo",
+                    "category_slug": "lavabo",
+                    "products": []
+                },
+                {
+                    "id": "12",
+                    "name": "Toneau",
+                    "category_slug": "toneau",
+                    "products": []
+                },
+                {
+                    "id": "13",
+                    "name": "Vasque",
+                    "category_slug": "vasque",
+                    "products": []
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "name": "Cuisine",
+            "category_slug": "cuisine",
+            "products": [
+                {
+                    "image": "Cuisine/Atlantic-Gris-Poli.png",
+                    "description": "Plan de travail en granit gris poli, idéal pour la cuisine moderne."
+                },
+                {
+                    "image": "Cuisine/Granit-Crema-Julia-Flamme.png",
+                    "description": "Plan de travail en granit crème, offrant une chaleur naturelle à votre espace."
+                },
+                {
+                    "image": "Cuisine/Granit-Noir-Absolut-Poli.png",
+                    "description": "Plan de travail en granit noir poli, élégant et intemporel."
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "name": "Sculptures",
+            "category_slug": "sculptures",
+            "products": [
+                {
+                    "image": "Sculptures/img_9407.jpg",
+                    "description": "Sculpture en marbre représentant une figure humaine."
+                },
+                {
+                    "image": "Sculptures/img-9393.jpg",
+                    "description": "Sculpture abstraite en pierre avec une finition polie."
+                },
+                {
+                    "image": "Sculptures/img-9396.jpg",
+                    "description": "Sculpture moderne en métal, ajoutant une touche contemporaine."
+                },
+                {
+                    "image": "Sculptures/img-9707.jpg",
+                    "description": "Sculpture en bois sculpté à la main, inspirée de la nature."
+                },
+                {
+                    "image": "Sculptures/img9.jpg",
+                    "description": "Sculpture en verre coloré, créant des reflets lumineux."
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "name": "Mobilier",
+            "category_slug": "mobilier",
+            "products": [
+                {
+                    "image": "Mobilier/Set-deTables-en-marbre-numero-1.png",
+                    "description": "Set de tables en marbre, un ajout élégant à votre espace."
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "name": "Decoration Objets",
+            "category_slug": "decoration_objects",
+            "products": [
+                {
+                    "image": "DecorationObjects/accessoires-en-calacatta.png",
+                    "description": "Accessoire en Calacatta, élégant et moderne."
+                },
+                {
+                    "image": "DecorationObjects/accessoires-en-thala-gris.png",
+                    "description": "Accessoire en Thala Gris, parfait pour toute décoration."
+                },
+                {
+                    "image": "DecorationObjects/centre-de-table-en-calacatta.png",
+                    "description": "Centre de table en Calacatta, ajoutant une touche de luxe."
+                },
+                {
+                    "image": "DecorationObjects/pots-en-Thala-beige-thala-Gris-foussana.png",
+                    "description": "Pots en Thala Beige et Thala Gris, parfaits pour vos plantes."
+                },
+                {
+                    "image": "DecorationObjects/totem-en-thala-beige.png",
+                    "description": "Totem en Thala Beige, idéal pour la décoration intérieure."
+                },
+                {
+                    "image": "DecorationObjects/vide-poche-en-calacatta.png",
+                    "description": "Vide poche en Calacatta, pour un style raffiné."
+                }
+            ]
+        }
+    ]
+}
