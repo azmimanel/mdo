@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import DrawerAppBar from "../components/Header";
 import { Box, TextField, Button, Typography } from '@mui/material';
-import Footer from "../components/Footer";
 import contactImage from '../Assets/img_0752.jpg';
 
 const Contact = () => {
@@ -27,7 +25,6 @@ const Contact = () => {
 
     return (
         <>
-            <DrawerAppBar />
             <Box
                 sx={{
                     display: 'flex',
@@ -70,7 +67,7 @@ const Contact = () => {
                         gap: 2
                     }}
                 >
-                    <Typography variant="h4" gutterBottom>
+                    <Typography variant="h4" gutterBottom >
                         Contactez-nous
                     </Typography>
                     <TextField
@@ -89,7 +86,7 @@ const Contact = () => {
                         onChange={handleChange}
                         fullWidth
                         required
-                        inputProps={{ pattern: "[0-9]{10,15}" }} // Validates 10-15 digit phone numbers
+                        inputProps={{ pattern: "[0-9]{8}" }} // Validates 10-15 digit phone numbers
                     />
                     <TextField
                         label="Email"
@@ -110,12 +107,19 @@ const Contact = () => {
                         rows={4}
                         required
                     />
-                    <Button type="submit" variant="contained" color="primary" sx={{ mt: 2, width: 'fit-content', alignSelf: 'flex-end' }}>
+                    <Button type="submit" variant="contained" color="primary"
+                        sx={{
+                            mt: 2,
+                            width: 'fit-content',
+                            alignSelf: 'flex-end',
+                            backgroundColor: '#a7a7a7 !important',
+                            color: 'white !important',
+                            boxShadow: 'none',
+                        }}>
                         Submit
                     </Button>
                 </Box>
             </Box>
-            <Footer />
         </>
     );
 };

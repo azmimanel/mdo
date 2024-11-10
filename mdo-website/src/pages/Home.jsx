@@ -1,5 +1,4 @@
 import React from "react";
-import DrawerAppBar from "../components/Header";
 import picture from "../Assets/img_0591.jpg";
 import style from "./pages.module.css";
 import { Button } from "@mui/material";
@@ -12,9 +11,9 @@ import slider3 from "../Assets/log_new.png";
 import slider4 from "../Assets/osaka-university-iscn-international-sustainable-campus-network-member.png";
 import slider5 from "../Assets/astor_epigrafe.webp";
 import slider6 from "../Assets/glendale-plaza-apartments-logo.png";
-import Footer from "../components/Footer";
 import presentationImage from "../Assets/presentation.jpg";
 import usineImage from "../Assets/2.jpg"
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
     const settings = {
@@ -27,13 +26,21 @@ const HomePage = () => {
         autoplaySpeed: 2000,
         cssEase: "linear"
     };
+
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate('/produits');
+    };
+
     return (
         <div className={style.container}>
-            <DrawerAppBar />
             <div className={`${style.displayFlex} ${style.homeSloganAndPictureContainer}`} >
                 <div className={style.sloganAndShopNowContainer}>
                     <h2>Notre métier est un vrai art! C’est aussi une passion.</h2>
-                    <Button className={style.shopNowButton}>Acheter Maintenant</Button>
+                    <Button className={style.shopNowButton} onClick={handleNavigate}>
+                        Acheter Maintenant
+                    </Button>
                 </div>
                 <img src={picture} alt="home" className={style.firstPictureHomeStyle} />
             </div>
@@ -83,7 +90,6 @@ const HomePage = () => {
                     </div>
                 </Slider>
             </div>
-            <Footer />
         </div>
     )
 }

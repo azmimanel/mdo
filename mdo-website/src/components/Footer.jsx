@@ -12,7 +12,10 @@ const Footer = () => {
                 color: '#f5f7f7', // Light text color for contrast
                 padding: '2rem 1rem',
                 marginTop: 'auto',
-                boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.2)', // Subtle shadow for depth
+                position: 'relative',
+                right: 0,
+                bottom: 0,
+                left: 0
             }}
         >
             <Grid container spacing={4} justifyContent="space-between">
@@ -34,8 +37,8 @@ const Footer = () => {
                     <Typography variant="h6">Pages</Typography>
                     <Typography variant="body2">
                         <Link href="/" underline="none" color="#f5f7f7" sx={{ '&:hover': { textDecoration: 'underline' } }}>Accueil</Link><br />
-                        <Link href="/products" underline="none" color="#f5f7f7" sx={{ '&:hover': { textDecoration: 'underline' } }}>Produits</Link><br />
-                        <Link href="/contacts" underline="none" color="#f5f7f7" sx={{ '&:hover': { textDecoration: 'underline' } }}>Contact</Link>
+                        <Link href="/produits" underline="none" color="#f5f7f7" sx={{ '&:hover': { textDecoration: 'underline' } }}>Produits</Link><br />
+                        <Link href="/contact" underline="none" color="#f5f7f7" sx={{ '&:hover': { textDecoration: 'underline' } }}>Contact</Link>
                     </Typography>
                 </Grid>
 
@@ -43,13 +46,13 @@ const Footer = () => {
                 <Grid item xs={12} md={4}>
                     <Typography variant="h6">Suivez-nous</Typography>
                     <Box>
-                        <IconButton href="https://www.facebook.com" target="_blank" sx={{ color: '#f5f7f7' }}>
+                        <IconButton href="https://www.facebook.com/mdotunisie" target="_blank" sx={{ color: '#f5f7f7' }}>
                             <FacebookIcon />
                         </IconButton>
-                        <IconButton href="https://www.youtube.com" target="_blank" sx={{ color: '#f5f7f7' }}>
+                        <IconButton href="https://www.youtube.com/@mdotunisie9683" target="_blank" sx={{ color: '#f5f7f7' }}>
                             <YouTubeIcon />
                         </IconButton>
-                        <IconButton href="https://www.instagram.com" target="_blank" sx={{ color: '#f5f7f7' }}>
+                        <IconButton href="https://www.instagram.com/mdo.tunisie/" target="_blank" sx={{ color: '#f5f7f7' }}>
                             <InstagramIcon />
                         </IconButton>
                     </Box>

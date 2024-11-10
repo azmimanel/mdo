@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -27,6 +27,12 @@ const navItems = [
 function DrawerAppBar(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate('/');
+    };
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
@@ -35,17 +41,29 @@ function DrawerAppBar(props) {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
-                MDO
+                <img src={Logo} style={{ height: '60px', cursor: 'pointer' }} alt='logo' onClick={handleNavigate} />
             </Typography>
             <Divider />
             <List>
-                {navItems.map((item) => (
-                    <ListItem key={item.label} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }} component={Link} to={item.path}>
-                            <ListItemText primary={item.label} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
+                {navItems.map((item) => {
+                    const isActive = location.pathname === item.path;
+
+                    return (
+                        <ListItem key={item.label} disablePadding>
+                            <ListItemButton
+                                sx={{
+                                    textAlign: 'center',
+                                    backgroundColor: isActive ? '#A7A7A7' : 'transparent',
+                                    color: isActive ? 'white' : 'inherit',
+                                }}
+                                component={Link}
+                                to={item.path}
+                            >
+                                <ListItemText primary={item.label} />
+                            </ListItemButton>
+                        </ListItem>
+                    );
+                })}
             </List>
         </Box>
     );
@@ -53,7 +71,7 @@ function DrawerAppBar(props) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', zIndex: '1' }}>
             <CssBaseline />
             <AppBar component="nav" sx={{ backgroundColor: '#f5f7f7', color: 'black', boxShadow: 'none', position: 'relative' }}>
                 <Toolbar>
@@ -71,7 +89,7 @@ function DrawerAppBar(props) {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        <img src={Logo} style={{ height: '60px' }} alt='logo' />
+                        <img src={Logo} style={{ height: '60px', cursor: 'pointer' }} alt='logo' onClick={handleNavigate} />
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (

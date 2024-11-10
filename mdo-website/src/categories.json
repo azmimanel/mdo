@@ -10,19 +10,62 @@
                     "id": "2",
                     "name": "Pierres Locales",
                     "category_slug": "pierres_locales",
-                    "products": []
+                    "products": [
+                        {
+                            "image": "Pierres/Locales/kadhelgris.jpg",
+                            "description": "Kadhel Gris"
+                        },
+                        {
+                            "image": "Pierres/Locales/ThalaNoirPoli.jpg",
+                            "description": "Thala Noir Poli"
+                        }
+                    ]
                 },
                 {
                     "id": "3",
                     "name": "Pierres Importées",
                     "category_slug": "pierres_importées",
-                    "products": []
+                    "products": [
+                        {
+                            "image": "Pierres/Importees/Atlantic_Gris_Brosse.jpg",
+                            "description": "Atlantic Gris Brosse"
+                        },
+                        {
+                            "image": "Pierres/Importees/botticino.jpg",
+                            "description": "Botticino"
+                        },
+                        {
+                            "image": "Pierres/Importees/Gioya.jpg",
+                            "description": "Gioya"
+                        },
+                        {
+                            "image": "Pierres/Importees/Granit_Crema_Julia_Flamme.jpg",
+                            "description": "Granit Crema Julia Flamme"
+                        },
+                        {
+                            "image": "Pierres/Importees/TrvertinoNocePoli.jpg",
+                            "description": "Trvertino Noce Poli"
+                        }
+                    ]
                 },
                 {
                     "id": "4",
-                    "name": "Pierres D'exceptio",
+                    "name": "Pierres D'exception",
                     "category_slug": "pierres_dexception",
-                    "products": []
+                    "products": [
+                        {
+                            "image": "Pierres/Exception/White_Onyx.jpg",
+                            "description": "White Onyx"
+                        },
+                        {
+                            "image": "Pierres/Exception/emperador.jpg",
+                            "description": "Emperador"
+                        },
+                        {
+                            "image": "Pierres/Exception/calcatta.jpg",
+                            "description": "Calcatta"
+                        }
+                    ]
                 }
             ]
         },
@@ -35,13 +78,35 @@
                     "id": "6",
                     "name": "Foussana ",
                     "category_slug": "foussana",
-                    "products": []
+                    "products": [
+                        {
+                            "image": "Finitions/Foussana/FoussanaBouchardBross.jpg",
+                            "description": "Foussana Bouchard Bross"
+                        },
+                        {
+                            "image": "Finitions/Foussana/foussanaeffetsable.jpg",
+                            "description": "Foussana Effetsable"
+                        },
+                        {
+                            "image": "Finitions/Foussana/FoussanaPoli.jpg",
+                            "description": "Foussana Poli"
+                        }
+                    ]
                 },
                 {
                     "id": "7",
                     "name": "Thala Beige Royal",
                     "category_slug": "thala_beige_royal",
-                    "products": []
+                    "products": [
+                        {
+                            "image": "Finitions/ThalaBeigeRoyal/ThalaBeigePoli.jpeg",
+                            "description": "Thala Beige Poli"
+                        },
+                        {
+                            "image": "Finitions/ThalaBeigeRoyal/ThalaBigeveinPoli.jpg",
+                            "description": "Thala Bigevein Poli"
+                        }
+                    ]
                 },
                 {
                     "id": "8",
