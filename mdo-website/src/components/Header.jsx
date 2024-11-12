@@ -77,7 +77,7 @@ function DrawerAppBar(props) {
     return (
         <Box sx={{ display: 'flex', zIndex: '1' }}>
             <CssBaseline />
-            <AppBar component="nav" sx={{ backgroundColor: 'transparent', color: 'black', boxShadow: 'none', position: 'relative' }}>
+            <AppBar component="nav" sx={{ backgroundColor: 'transparent', color: isHomePage ? 'white' : 'black', boxShadow: 'none', position: 'relative' }}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -142,7 +142,7 @@ function DrawerAppBar(props) {
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
+                        keepMounted: true,
                     }}
                     sx={{
                         display: { xs: 'block', sm: 'none' },

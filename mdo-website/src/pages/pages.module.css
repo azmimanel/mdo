@@ -88,6 +88,7 @@
     background-image: url('../Assets/Marble_noir_aziza.jpg');
     background-size: cover;
     background-position: center;
+    margin-top: -70px;
 }
 
 .bannerHome h3 {
