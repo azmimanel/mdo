@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -16,6 +16,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Logo from "../Assets/LOGO.png";
+import logo_white from "../Assets/logo_white.png";
+import { Instagram, YouTube, Facebook } from '@mui/icons-material';
 
 const drawerWidth = 240;
 const navItems = [
@@ -33,6 +35,8 @@ function DrawerAppBar(props) {
     const handleNavigate = () => {
         navigate('/');
     };
+
+    const isHomePage = location.pathname === '/';
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
@@ -73,7 +77,7 @@ function DrawerAppBar(props) {
     return (
         <Box sx={{ display: 'flex', zIndex: '1' }}>
             <CssBaseline />
-            <AppBar component="nav" sx={{ backgroundColor: '#f5f7f7', color: 'black', boxShadow: 'none', position: 'relative' }}>
+            <AppBar component="nav" sx={{ backgroundColor: 'transparent', color: 'black', boxShadow: 'none', position: 'relative' }}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -84,19 +88,50 @@ function DrawerAppBar(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                    >
-                        <img src={Logo} style={{ height: '60px', cursor: 'pointer' }} alt='logo' onClick={handleNavigate} />
-                    </Typography>
-                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        {navItems.map((item) => (
-                            <Button key={item.label} sx={{ color: 'black' }} component={Link} to={item.path}>
-                                {item.label}
-                            </Button>
-                        ))}
+                    <Box sx={{ display: 'flex', flexGrow: 1, justifyContent: 'space-between', alignItems: 'center' }}>
+                        {/* Left Section with Logo and Navigation Links */}
+                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                            <Typography
+                                variant="h6"
+                                component="div"
+                                sx={{ display: { xs: 'none', sm: 'block' }, marginRight: 2 }}
+                            >
+                                <img src={isHomePage ? logo_white : Logo} style={{ height: '60px', cursor: 'pointer', marginRight: '55px' }} alt='logo' onClick={handleNavigate} />
+                            </Typography>
+                            <Box sx={{ display: { xs: 'none', sm: 'flex' }, flexGrow: 1, justifyContent: 'flex-start', gap: '30px' }}>
+                                {navItems.map((item) => (
+                                    <Button
+                                        key={item.label}
+                                        component={NavLink}
+                                        to={item.path}
+                                        sx={{
+                                            fontSize: '18px',
+                                            color: isHomePage ? 'white' : 'black',
+                                            textDecoration: 'none',
+                                            '&.active': {
+                                                textDecoration: 'underline',
+                                                textUnderlinePosition: 'under',
+                                                textDecorationColor: '#77451b',
+                                                textDecorationThickness: '2px',
+                                            }
+                                        }}
+                                    >
+                                        {item.label}
+                                    </Button>
+                                ))}
+                            </Box>
+                        </Box>
+                        <Box sx={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+                            <IconButton href="https://www.instagram.com/mdo.tunisie/" target="_blank" aria-label="Instagram">
+                                <Instagram sx={{ color: isHomePage ? 'white' : 'black' }} />
+                            </IconButton>
+                            <IconButton href="https://www.youtube.com/@mdotunisie9683" target="_blank" aria-label="YouTube">
+                                <YouTube sx={{ color: isHomePage ? 'white' : 'black' }} />
+                            </IconButton>
+                            <IconButton href="https://www.facebook.com/mdotunisie" target="_blank" aria-label="Facebook">
+                                <Facebook sx={{ color: isHomePage ? 'white' : 'black' }} />
+                            </IconButton>
+                        </Box>
                     </Box>
                 </Toolbar>
             </AppBar>

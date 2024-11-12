@@ -20,7 +20,7 @@
 }
 
 .category-name.active {
-    background-color: #C0C0C0;
+    background-color: rgba(119, 69, 27, 0.4);
     /* Use a lighter gray for a softer look */
     color: #000;
     /* Dark text color for contrast */

@@ -192,3 +192,62 @@
         font-size: 12px;
     }
 }
+
+/* Full-width and full-height container */
+.sliderContainer {
+    width: 100vw;
+    /* Full viewport width */
+    overflow: hidden;
+    /* Prevent scrollbars */
+}
+
+.homeSloganAndPictureContainer {
+    width: 100vw;
+    /* Full viewport width */
+    height: 100vh;
+    /* Full viewport height */
+    position: relative;
+    /* Enable positioning for text overlay */
+}
+
+/* Make image take up full width and height */
+.firstPictureHomeStyle {
+    width: 100vw;
+    /* Full viewport width */
+    height: 100vh;
+    /* Full viewport height */
+    object-fit: cover;
+    /* Ensures image fills the container without stretching */
+}
+
+
+.animateSlogan {
+    opacity: 1;
+}
+
+.homeContainerMiddle .button {
+    display: inline-block;
+    margin: 10px 30px;
+    padding: 10px 20px;
+    background-color: #77451b;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.homeContainerMiddle .button:hover {
+    background-color: #5c3614;
+}
+
+.responsiveText {
+    font-size: 2em;
+}
+
+@media (max-width: 600px) {
+    .responsiveText {
+        font-size: 1em;
+    }
+}
